@@ -1,0 +1,59 @@
+{
+    "name": "futuregadget-lab/phone-wave",
+    "description": "Name subject to change.",
+    "keywords": [
+        "futuregadget-lab",
+        "phone-wave"
+    ],
+    "homepage": "https://github.com/futuregadget-lab/phone-wave",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Hououin Kyouma",
+            "email": "hououin@futuregadget-lab.us",
+            "role": "Mad Scientist"
+        },
+        {
+            "name": "Itaru Hashida",
+            "email": "itaru@futuregadget-lab.us",
+            "role": "Hacker"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "illuminate/support": "^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FutureGadgetLab\\PhoneWave\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FutureGadgetLab\\PhoneWave\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": ".\\vendor\\bin\\phpunit",
+        "test-coverage": ".\\vendor\\bin\\phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FutureGadgetLab\\PhoneWave\\PhoneWaveServiceProvider"
+            ],
+            "aliases": {
+                "PhoneWave": "FutureGadgetLab\\PhoneWave\\PhoneWaveFacade"
+            }
+        }
+    }
+}
